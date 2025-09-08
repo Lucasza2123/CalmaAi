@@ -1,112 +1,78 @@
-:root {
-    --primary: #9b7dd8;       
-    --secondary: #e8d9f8;     
-    --accent: #6a2c70;        
-    --light: #ffffff;          
-    --gray: #7a6f8d;           
-    --shadow: rgba(0, 0, 0, 0.15);
-}
-
-/* Reset básico */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-}
-
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #a87ee5, #c9a7ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
 }
 
-/* Container */
 .container {
-    width: 90%;
-    max-width: 400px;
-    background-color: var(--light);
-    padding: 35px 30px;
-    border-radius: 25px;
-    box-shadow: 0 8px 25px var(--shadow);
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 400px;
 }
 
-/* Logo */
-.logo h1 {
-    text-align: center;
-    color: var(--primary);
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.logo p {
-    text-align: center;
-    color: var(--accent);
-    font-size: 14px;
-    margin-bottom: 25px;
-}
-
-/* Formulário */
-.form-group {
-    margin-bottom: 18px;
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #7d4bc7;
 }
 
 label {
-    display: block;
-    margin-bottom: 6px;
-    color: var(--accent);
-    font-weight: 600;
-    font-size: 14px;
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #5a2b8c;
 }
 
-input#register-name,
-input#register-email,
-input#register-password,
-input#register-confirm {
-    width: 100%;
-    padding: 12px 18px;
-    border-radius: 30px;
-    border: 1px solid var(--gray);
-    outline: none;
-    font-size: 14px;
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #aaa;
+  border-radius: 25px;
+  font-size: 14px;
+  outline: none;
 }
 
-/* Botão Criar Conta */
-.btn {
-    width: 100%;
-    padding: 14px;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 12px;
-    box-shadow: 0 4px 12px var(--shadow);
-    text-align: center;
-    background-color: var(--primary);
-    color: var(--light);
+input:focus {
+  border-color: #7d4bc7;
+  box-shadow: 0 0 5px rgba(125,75,199,0.5);
 }
 
-.btn:hover {
-    background-color: var(--accent);
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  margin-top: 1.5rem;
+  background: #a77ae5;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-/* Responsividade */
-@media (max-width: 480px) {
-    .container {
-        padding: 25px 20px;
-        border-radius: 20px;
-    }
+.btn-primary:hover {
+  background: #8e62d6;
+}
 
-    input,
-    .btn {
-        padding: 12px;
-        font-size: 14px;
-    }
+.back-login {
+  text-align: center;
+  margin-top: 1rem;
+}
 
-    .logo h1 {
-        font-size: 24px;
-    }
+.back-login a {
+  color: #7d4bc7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-login a:hover {
+  text-decoration: underline;
 }

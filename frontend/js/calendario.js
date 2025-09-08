@@ -1,5 +1,4 @@
-    // Calendário
-        let currentCalendarDate = new Date();
+  let currentCalendarDate = new Date();
         let selectedCalendarDate = null;
         
         function renderCalendar() {
@@ -112,4 +111,26 @@
             localStorage.setItem('calma_ai_moods', JSON.stringify(moods));
             alert('Nota salva com sucesso!');
             renderCalendar(); // Atualizar o calendário para refletir as mudanças
+        });
+        
+        // Formulário de perfil
+        document.getElementById('profile-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('profile-name').value;
+            const email = document.getElementById('profile-email').value;
+            
+            // Atualizar usuário atual
+            currentUser.name = name;
+            currentUser.email = email;
+            
+            // Atualizar na lista de usuários
+            const userIndex = users.findIndex(u => u.id === currentUser.id);
+            if (userIndex !== -1) {
+                users[userIndex] = currentUser;
+                localStorage.setItem('calma_ai_users', JSON.stringify(users));
+                localStorage.setItem('calma_ai_current_user', JSON.stringify(currentUser));
+            }
+            
+            alert('Perfil atualizado com sucesso!');
+            showScreen('menu-screen');
         });
