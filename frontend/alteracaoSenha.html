@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calma AI - Alterar Senha</title>
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>Alterar Senha</h1>
+            <p>Digite sua nova senha</p>
+        </div>
+        
+        <form id="change-password-form">
+            <div class="form-group">
+                <label for="current-password">Senha Atual</label>
+                <input type="password" class="form-control" id="current-password" placeholder="Sua senha atual" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="new-password">Nova Senha</label>
+                <input type="password" class="form-control" id="new-password" placeholder="Nova senha" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirm-new-password">Confirmar Nova Senha</label>
+                <input type="password" class="form-control" id="confirm-new-password" placeholder="Confirme a nova senha" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Alterar Senha</button>
+        </form>
+        
+        <button type="button" class="btn btn-link" onclick="window.location.href='perfil.html'">Voltar ao Perfil</button>
+    </div>
+
+    <script src="js/alterar-senha.js"></script>
+</body>
+</html>

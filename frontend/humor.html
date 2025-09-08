@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calma AI - Humor</title>
+<link rel="stylesheet" href="css/humor.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="logo">
+        <h1>Como você está hoje?</h1>
+        <p>Selecione o que melhor descreve seu humor</p>
+    </div>
+
+    <div class="mood-options">
+        <div class="mood-option" data-mood="ansioso">
+            <div class="mood-emoji">😰</div>
+            <div class="mood-text">Ansioso</div>
+        </div>
+        <div class="mood-option" data-mood="triste">
+            <div class="mood-emoji">😢</div>
+            <div class="mood-text">Triste</div>
+        </div>
+        <div class="mood-option" data-mood="cansado">
+            <div class="mood-emoji">😴</div>
+            <div class="mood-text">Cansado</div>
+        </div>
+        <div class="mood-option" data-mood="bem">
+            <div class="mood-emoji">🙂</div>
+            <div class="mood-text">Bem</div>
+        </div>
+        <div class="mood-option" data-mood="feliz">
+            <div class="mood-emoji">😄</div>
+            <div class="mood-text">Feliz</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="mood-notes">Observações (opcional)</label>
+        <textarea id="mood-notes" rows="3" placeholder="Descreva brevemente como você está se sentindo..."></textarea>
+    </div>
+
+    <button type="button" class="btn" id="save-mood">Salvar e Continuar</button>
+</div>
+
+<script src="js/humor.js"></script>
+</body>
+</html>

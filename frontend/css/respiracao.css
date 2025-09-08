@@ -1,0 +1,68 @@
+:root {
+    --primary: #9b7dd8;
+    --secondary: #e8d9f8;
+    --accent: #6a2c70;
+    --light: #ffffff;
+    --gray: #7a6f8d;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary);
+}
+
+.container {
+    background: var(--light);
+    border-radius: 20px;
+    padding: 30px 25px;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+h1 { color: var(--primary); margin-bottom: 10px; }
+p { color: var(--accent); margin-bottom: 25px; }
+
+.breathing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 2s ease-in-out;
+}
+
+.instructions {
+    color: var(--accent);
+    font-size: 14px;
+    text-align: center;
+}
+
+.timer {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+#start-breathing, #stop-breathing {
+    width: 50%;
+    margin: 5px 0;
+}

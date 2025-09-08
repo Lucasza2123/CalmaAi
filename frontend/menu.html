@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calma AI - Menu</title>
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Tela de Menu Principal -->
+  <div class="screen active" id="menu-screen">
+    <div class="logo">
+      <h1>Calma AI</h1>
+      <p>O que você gostaria de fazer hoje?</p>
+    </div>
+    
+    <div class="menu-grid">
+      <div class="menu-item" onclick="window.location.href='respiracao.html'">
+        <div class="menu-icon"><i class="fas fa-wind"></i></div>
+        <div class="menu-text">Respiração</div>
+      </div>
+      
+      <div class="menu-item" id="go-to-chat">
+        <div class="menu-icon"><i class="fas fa-comments"></i></div>
+        <div class="menu-text">Conversar - (beta)</div>
+      </div>
+      
+      <div class="menu-item" onclick="window.location.href='calendario.html'">
+        <div class="menu-icon"><i class="fas fa-calendar"></i></div>
+        <div class="menu-text">Calendário</div>
+      </div>
+      
+      <div class="menu-item" onclick="window.location.href='perfil.html'">
+        <div class="menu-icon"><i class="fas fa-user"></i></div>
+        <div class="menu-text">Perfil</div>
+      </div>
+    </div>
+    
+    <button type="button" class="btn btn-link" id="logout-button">Sair</button>
+  </div>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>
