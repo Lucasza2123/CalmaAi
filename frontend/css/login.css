@@ -1,0 +1,136 @@
+:root {
+    --primary: #9b7dd8;       
+    --secondary: #e8d9f8;     
+    --accent: #6a2c70;        
+    --light: #ffffff;          
+    --gray: #7a6f8d;           
+    --shadow: rgba(0, 0, 0, 0.15);
+}
+
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 400px;
+    background-color: var(--light);
+    padding: 35px 30px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px var(--shadow);
+}
+
+/* Logo */
+.logo h1 {
+    text-align: center;
+    color: var(--primary);
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+/* Formulário */
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input#login-email,
+input#login-password {
+    width: 100%;
+    padding: 12px 18px;
+    border-radius: 30px;
+    border: 1px solid var(--gray);
+    outline: none;
+    font-size: 14px;
+}
+
+/* Botões */
+.btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 12px var(--shadow);
+    text-align: center;
+}
+
+/* Botão Entrar */
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent);
+}
+
+/* Botão Criar Conta */
+.btn-secondary {
+    background-color: var(--light);
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+/* Link "Esqueci minha senha" */
+.btn-link {
+    background: none;
+    border: none;
+    color: var(--primary);
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn-link:hover {
+    color: var(--accent);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .container {
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+
+    input,
+    .btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+}

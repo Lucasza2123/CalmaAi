@@ -1,0 +1,144 @@
+ body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      gap: 20px;
+      width: 90%;
+      max-width: 900px;
+    }
+
+    .calendar {
+      flex: 1;
+    }
+
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .calendar-header h2 {
+      margin: 0;
+      color: #6a1b9a;
+    }
+
+    .calendar-days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+    }
+    
+    .day-name {
+      font-weight: bold;
+      text-align: center;
+      color: #6a1b9a;
+      padding-bottom: 10px;
+    }
+
+    .day {
+      padding: 15px;
+      text-align: center;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
+      border: 2px solid transparent;
+    }
+
+    .day:hover {
+      background: #f1f1f1;
+      transform: scale(1.05);
+    }
+
+    .day.selected {
+      border: 2px solid #6a1b9a;
+      background-color: #f3e5f5;
+    }
+
+    /* Cores de humor */
+    .ansioso { background: #ff9f43; color: #fff; }
+    .triste { background: #54a0ff; color: #fff; }
+    .cansado { background: #8395a7; color: #fff; }
+    .bem { background: #1dd1a1; color: #fff; }
+    .feliz { background: #feca57; color: #fff; }
+    .ansioso.selected, .triste.selected, .cansado.selected, .bem.selected, .feliz.selected {
+      border: 2px solid #333;
+    }
+
+    /* Lado direito */
+    .notes {
+      flex: 1;
+      background: #fafafa;
+      padding: 15px;
+      border-radius: 12px;
+    }
+
+    .notes h3 {
+      color: #6a1b9a;
+      margin-top: 0;
+    }
+
+    .note-list {
+      margin-top: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .note-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 8px;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    textarea {
+      width: calc(100% - 16px);
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      padding: 8px;
+      resize: none;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+      background: #6a1b9a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #4a148c;
+    }
+
+    .back {
+      display: block;
+      margin-top: 20px;
+      color: #6a5acd;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back:hover {
+      text-decoration: underline;
+    }

@@ -1,0 +1,31 @@
+{
+  "name": "sistema-calmaai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "lucas-guilherme-amanda",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "fdir": "^6.5.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.1",
+    "nanoid": "^5.1.5",
+    "path": "^0.12.7",
+    "picocolors": "^1.1.1",
+    "picomatch": "^4.0.3",
+    "postcss": "^8.5.6",
+    "rollup": "^4.50.1",
+    "source-map-js": "^1.2.1",
+    "tinyglobby": "^0.2.15",
+    "url": "^0.11.4"
+  }
+}

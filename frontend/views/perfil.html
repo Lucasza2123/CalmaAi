@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calma AI - Perfil</title>
+    <link rel="stylesheet" href="/css/perfil.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Tela de Perfil -->
+        <div class="screen" id="profile-screen">
+            <div class="logo">
+                <h1>Seu Perfil</h1>
+                <p>Gerencie suas configurações</p>
+            </div>
+
+            <form id="profile-form">
+                <div class="form-group">
+                    <label for="profile-name">Nome Completo</label>
+                    <input type="text" class="form-control" id="profile-name" placeholder="Seu nome completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="profile-email">E-mail</label>
+                    <input type="email" class="form-control" id="profile-email" placeholder="Seu e-mail" required>
+                </div>
+
+                <button type="button" class="btn btn-link" id="go-to-change-password">Alterar Senha</button>
+                <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+            </form>
+
+            <button type="button" class="btn btn-link" id="back-to-menu">Voltar ao Menu</button>
+        </div>
+
+        <!-- Tela de Alterar Senha (inicialmente escondida) -->
+        <div class="screen hidden" id="change-password-screen">
+            <div class="logo">
+                <h1>Alterar Senha</h1>
+                <p>Digite sua nova senha</p>
+            </div>
+
+            <form id="change-password-form">
+                <div class="form-group">
+                    <label for="current-password">Senha Atual</label>
+                    <input type="password" class="form-control" id="current-password" placeholder="Sua senha atual" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="new-password">Nova Senha</label>
+                    <input type="password" class="form-control" id="new-password" placeholder="Nova senha" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-new-password">Confirmar Nova Senha</label>
+                    <input type="password" class="form-control" id="confirm-new-password" placeholder="Confirme a nova senha" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Alterar Senha</button>
+            </form>
+
+            <button type="button" class="btn btn-link" id="back-from-change-password">Voltar ao Perfil</button>
+        </div>
+    </div>
+
+    <script src="/js/perfil.js"></script>
+</body>
+</html>

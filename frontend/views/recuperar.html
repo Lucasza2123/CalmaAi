@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calma AI - Recuperar Senha</title>
+    <link rel="stylesheet" href="/css/recuperar.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>Recuperar Senha</h1>
+            <p>Informe seu e-mail para redefinir a senha</p>
+        </div>
+        
+        <form id="forgot-form">
+            <div class="form-group">
+                <label for="forgot-email">E-mail</label>
+                <input type="email" class="form-control" id="forgot-email" placeholder="Seu e-mail" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Enviar Link de Redefinição</button>
+            
+            <div class="divider"><span>ou</span></div>
+            
+            <button type="button" class="btn btn-link" onclick="window.location.href='index.html'">Lembrei minha senha</button>
+        </form>
+    </div>
+
+    <script src="/js/recuperar.js"></script>
+</body>
+</html>
+ 

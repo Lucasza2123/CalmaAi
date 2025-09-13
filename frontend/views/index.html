@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calma AI - Login</title>
+  <link rel="stylesheet" href="/css/login.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <h1>Calma AI</h1>
+    </div>
+
+    <form id="login-form">
+      <div class="form-group">
+        <label for="login-email">E-mail</label>
+        <input type="email" id="login-email" placeholder="Seu e-mail" required />
+      </div>
+
+      <div class="form-group">
+        <label for="login-password">Senha</label>
+        <input type="password" id="login-password" placeholder="Sua senha" required />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Entrar</button>
+
+      <div class="divider"><span>ou</span></div>
+
+      <button type="button" class="btn btn-secondary" onclick="window.location.href='cadastro.html'">Criar uma conta</button>
+
+      <button type="button" class="btn btn-link" onclick="window.location.href='recuperar.html'">Esqueci minha senha</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("login-form").addEventListener("submit", async function(event) {
+      event.preventDefault();
+
+      const email = document.getElementById("login-email").value;
+      const password = document.getElementById("login-password").value;
+
+      try {
+        const response = await fetch("http://localhost:3000/api/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          // salvar o token e userId no localStorage (pra usar nas próximas requisições)
+          localStorage.setItem("token", data.token);
+          localStorage.setItem("userId", data.userId);
+
+          alert("Login realizado com sucesso!");
+          window.location.href = "/views/humor.html"; 
+        } else {
+          alert(data.message || "Erro no login!");
+        }
+      } catch (err) {
+        console.error(err);
+        alert("Erro ao conectar ao servidor!");
+      }
+    });
+  </script>
+</body>
+</html>

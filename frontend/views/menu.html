@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calma AI - Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #6a5acd, #7b68ee);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 500px;
+    }
+
+    h1 {
+      color: #6a1b9a;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .menu-btn {
+      background: #f4f4f4;
+      border: none;
+      border-radius: 10px;
+      padding: 30px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .menu-btn:hover {
+      background: #e0e0e0;
+      transform: scale(1.05);
+    }
+
+    .logout {
+      display: block;
+      margin-top: 20px;
+      color: #6a5acd;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .logout:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Calma AI</h1>
+    <p>O que você gostaria de fazer hoje?</p>
+
+    <div class="menu-grid">
+      <button class="menu-btn" onclick="window.location.href='respiracao.html'"><br>Respiração</button>
+      <button class="menu-btn" onclick="window.location.href='chat.html'"><br>Conversar</button>
+      <button class="menu-btn" onclick="window.location.href='calendario.html'"><br>Calendário</button>
+      <button class="menu-btn" onclick="window.location.href='perfil.html'"><br>Perfil</button>
+    </div>
+
+    <a href="index.html" class="logout" onclick="localStorage.clear()">Sair</a>
+  </div>
+</body>
+</html>

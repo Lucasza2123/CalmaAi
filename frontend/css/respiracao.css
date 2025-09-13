@@ -1,0 +1,124 @@
+/* respiracao.css */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #a87ee5, #c9a7ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo h1 {
+  text-align: center;
+  color: #7d4bc7;
+  margin: 0;
+}
+
+.logo p {
+  text-align: center;
+  color: #5a2b8c;
+  margin-bottom: 1.5rem;
+}
+
+.breathing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #d9c5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b0066;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  transition: all 1s ease;
+}
+
+.instructions {
+  text-align: center;
+  color: #5a2b8c;
+  margin-bottom: 1rem;
+}
+
+.timer {
+  font-size: 32px;
+  font-weight: bold;
+  color: #7d4bc7;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 0.5rem;
+  background: #a77ae5;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #8e62d6;
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  background: #7d4bc7;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #5a2b8c;
+}
+
+/* Botão Voltar ao Menu */
+.btn-link {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: #7d4bc7;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.btn-link:hover {
+  background: #5a2b8c;
+}
